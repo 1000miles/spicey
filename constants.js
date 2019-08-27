@@ -1,2 +1,0 @@
-const PLAYER_WIDTH = 50;
-const PLAYER_HEIGHT = 100;
