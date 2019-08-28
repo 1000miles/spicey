@@ -1,14 +1,13 @@
 class Food {
-    constructor() {
-        this.food = new Food();
+    constructor(x, y, img) {
         this.width = width;
         this.height = height;
-    }
-
-    setup() {
-
+        this.x = x;
+        this.y = y;
+        this.image = img;
     }
 
     draw() {
+        image(this.image, this.x % windowWidth, this.y += 3, 30, 30);
     }
 }
