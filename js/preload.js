@@ -1,6 +1,18 @@
+
+// GLOBAL VARIABLES
+
+// Backgrounds
 let bgImage1;
+
+// Players
 let player1;
+let player1x; // TODO
+let player1y; // TODO
+
+// Obstacles
 let plane1;
+let plane2;
+let plane3;
 let plane4;
 
 function preload() {
@@ -12,9 +24,11 @@ function preload() {
 
     // Obstacles
     plane1 = loadImage("assets/obstacles/plane/Fly1.png");
+    plane2 = loadImage("assets/obstacles/plane/Fly2.png");
+    plane3 = loadImage("assets/obstacles/plane/Shoot5.png");
     plane4 = loadImage("assets/obstacles/plane/Dead1.png");
 
-    // Food
+    // TODO: Food sprite
     foodArr = [
         "assets/food/Apple.png",
         "assets/food/AppleWorm.png",

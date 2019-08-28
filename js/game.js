@@ -8,10 +8,15 @@ class Game {
     }
 
     draw() {
+        clear();
         // Load Background Image
         image(bgImage1, 0, 0, windowWidth, windowHeight);
 
         this.player.draw();
         this.obstacle.draw();
+    }
+
+    move() {
+        this.player.move();
     }
 }
