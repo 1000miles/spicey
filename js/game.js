@@ -1,7 +1,7 @@
 class Game {
     constructor() {
         // Make sure player always starts at the same point (left bottom)
-        this.player = new Player(20, window.innerHeight - PLAYER_HEIGHT - 75);
+        this.player = new Player(10, window.innerHeight - PLAYER_HEIGHT - 30);
         this.obstacle = new Obstacle(100, 100);
         // this.foods = [];
     }
