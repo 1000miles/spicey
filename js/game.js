@@ -1,22 +1,17 @@
-let flightObj = 0;
-
 class Game {
     constructor() {
-        this.player = new Player(PLAYER_WIDTH, PLAYER_HEIGHT);
+        // Make sure player always starts at the same point (left bottom)
+        this.player = new Player(20, window.innerHeight - PLAYER_HEIGHT - 75);
         this.obstacle = new Obstacle(100, 100);
         // this.foods = [];
     }
 
     draw() {
         clear();
-        // Load Background Image
+        // TODO: Load Background Image in full size
         image(bgImage1, 0, 0, windowWidth, windowHeight);
 
         this.player.draw();
         this.obstacle.draw();
-    }
-
-    move() {
-        this.player.move();
     }
 }

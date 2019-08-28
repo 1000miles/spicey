@@ -23,6 +23,8 @@ function preload() {
     player1 = loadImage("assets/player2/spr_m_pjnerd2.png");
 
     // Obstacles
+
+    // TODO: Plane sprite
     plane1 = loadImage("assets/obstacles/plane/Fly1.png");
     plane2 = loadImage("assets/obstacles/plane/Fly2.png");
     plane3 = loadImage("assets/obstacles/plane/Shoot5.png");

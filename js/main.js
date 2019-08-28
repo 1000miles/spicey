@@ -7,4 +7,21 @@ function setup() {
 
 function draw() {
     game.draw();
+
+    keyPressed(); // call the keyPressed function
+}
+
+function keyPressed() {
+    if (keyIsDown(RIGHT_ARROW)){
+        game.player.posX += 1;
+    }
+    if (keyIsDown(LEFT_ARROW)) {
+        game.player.posX -= 1;
+    }
+    if (keyIsDown(UP_ARROW)) {
+        game.player.posY -= 1;
+    }
+    if (keyIsDown(DOWN_ARROW)) {
+        game.player.posY += 1;
+    }
 }
