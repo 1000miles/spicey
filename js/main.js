@@ -7,6 +7,7 @@ function setup() {
 }
 
 function draw() {
+    clear();
     game.draw();
     keyPressed(); // call the keyPressed function
     // @DEBUG console.log(game.player.posY, innerHeight);

@@ -10,6 +10,12 @@ let plane2;
 let plane3;
 let plane4;
 
+// Obstacles
+let wolfBlue;
+
+// Food
+let avocado;
+
 function preload() {
     // Backgrounds
     bgImage1 = loadImage("assets/backgrounds/game_background_1.png");
@@ -29,5 +35,11 @@ function preload() {
         "assets/food/Beer.png",
         "assets/food/Bread.png"
     ];
+
+    avocado = loadImage("assets/food/Avocado.png");
+    chilli = loadImage("assets/food/PepperRed.png");
+
+    // TODO: Obstacles sprite
+    wolfBlue = loadImage("assets/obstacles/danger/wolf-blue.png");
 }
 

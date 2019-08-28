@@ -1,19 +1,25 @@
-let flightObj = 0;
 
 class Obstacle {
-    constructor(x,y) {
-        this.x = x;
-        this.y = y;
+    constructor(posX,posY,frame) {
+        this.posX = posX;
+        this.posY = posY;
+        this.foods= [];
+        this.frame = frame;
     }
 
     draw() {
         // Load Obstacles
-        push();
-            // image(src, xPos, yPos, width, height)
-            // image(plane1, (flightObj += 1) % windowWidth, 50, 37.50, 25);
-            // image(plane2, (flightObj += 1) % windowWidth, 75, 37.5, 25);
-            image(plane3, (flightObj += 1) % windowWidth, 100, 75, 50);
-            image(plane4, (flightObj += 1) % windowWidth, 175, 100, 75);
-        pop();
+        // image(src, xPos, yPos, width, height)
+        image(plane1, (this.posX+=1) % windowWidth, this.posY, 100, 75);
+
+        if (frameCount % this.frame === 0) {
+            this.foods.push(new Food(this.posX, this.posY + 75, chilli));
+        }
+
+        if (this.foods.length > 10) this.foods.shift();
+        
+        this.foods.forEach(
+            food => food.draw()
+        );
     }
 }

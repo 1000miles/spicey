@@ -68,11 +68,38 @@
         - [x] Make player 1 move on keyPressed();
         - [x] Set conditions for directions;
         - [x] Ensure player does not move out of the screen
-        - [ ] Set conditions for speed; (extra)
+        - [ ] Set conditions for speed (extra)
+        - [ ] Make player jump (extra)
 - [x] Visualization
     - [x] Use ~~sprites with~~ images that contain left, right, up, down images
 
 ### Obstacles
+
+- [x] Logic
+    - [x] Create plane 1 that moves from left to right in a loop
+        - [x] it should throw objects from the plane
+        - [x] it should define the frequency of throwing food
+
+- [x] Visualization
+    - [x] Throw chilli (weapon) from the plane 1
+    - [ ] Throw random food from plane 2 (extra)
+
+## Goal of Day 4
+
+### Obstacles
+
+**Support (Plane)**
+
+- [ ] Logic
+    - [ ] Create an array of food images and pull food from it randomly (extra)
+    - [ ] Create a function for the player to catch the food from the plane
+    - [ ] Use DOM manipulation to display scoring
+        - [ ] Calculate points won when food has been caught
+
+        - [ ] Calculate points lost when food has been caught
+- [ ] Visualization
+    - [ ] Show different food types falling
+    - [ ] Show player scoring
 
 **Collisions**
 
@@ -82,5 +109,4 @@
     - [ ] Set the visual frame and frequency for obstacles
 
 - [ ] Visualization
-    - [ ] Let obstacle throw objects from top to bottom
-    - [ ] Let obstacle appear on the ground
+    - [ ] Let obstacle (wolf) appear on the ground
