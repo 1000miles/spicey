@@ -18,18 +18,68 @@
 
 ## TODO Breakdown
 
+### Goal of Day 1
+
 1. Setup
     - boilerplate:
-        - [ ] index.html
-        - [ ] style.css
-        - [ ] p5 libaries
-    - files and folders
-        - [ ] assets/
-        - [ ] css/
-        - [ ] js/
+        - [x] index.html
+        - [x] style.css
+        - [x] p5 libaries: p5 play, p5 dom
+    - folders
+        - [x] assets/
+        - [x] css/
+        - [x] js/
     - files
-        - [ ] constants.js
-        - [ ] player.js
-        - [ ] obstacle.js
-        - [ ] food.js
-        - [ ] main.js
+        - [x] constants.js
+        - [x] preload.js
+        - [x] obstacle.js
+        - [x] food.js
+        - [x] player.js
+        - [x] game.js
+        - [x] main.js
+
+2. Game concept
+    - [x] Create a background story
+    - [x] Define an environment
+    - [x] Define the characters
+    - [x] Define obstacles
+    - [ ] Set conditions to win and lose
+
+### Goal of Day 2
+
+1. Background
+    - [x] Set image background
+
+2. Obstacles
+    - [x] Learn how to move obstacles in a loop
+    - [x] Learn how to drop obstacles
+
+3. Player
+    - [x] Make player1 visible
+
+### Goal of Day 3
+
+#### Player
+
+**Movement**
+
+- [ ] Logic
+    - [ ] Create a function to move the player
+        - [ ] Make player 1 move on keyPressed();
+        - [ ] Set conditions for directions;
+        - [ ] Set conditions for speed; (extra)
+- [ ] Visualization
+    - [ ] Use sprites with images that contain left, right, up, down
+
+#### Obstacles
+
+**Collisions**
+
+- [ ] Logic
+    - [ ] Create a function to check collisions
+    - [ ] Set conditions when and how often obstacle appears and when it disappears
+    - [ ] Set the visual frame and frequency for obstacles
+
+- [ ] Visualization
+    - [ ] Let obstacle throw objects from top to bottom
+    - [ ] Let obstacle appear on the ground
