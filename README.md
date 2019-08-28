@@ -1,14 +1,14 @@
-# spicer
+# Spicey - Fight for your life with chilli
 
 ## Story
 
 1. We are in the year 2050. Due to greed of the powerfullest and climate change most cities and communities have been destroyed. Those who survived found refuge in the forest, rural areas and on islands. Food is very rare. 
 2. This game is about searching, finding, exchanging, saving and sharing food.
 3. The goal is to accumulate as much and various food as possible and prevent enemies from taking away the food.
-4. Once food is found or won in a battle, the food inventory will increase the player will be awarded with points.
-5. Chances: 
-    - Hiding food from enemies increases the points.
-    - Hungry wolves who eat humans can be killed by feeding with chili or other spicy stuff.
+4. Once food is found or won in a battle, the food inventory will increase and the player will be awarded with points.
+5. Chances:
+    - Hiding food from enemies or eating them before enemies catch them increases the points.
+    - Hungry wolves who eat humans can be killed by feeding with chilli or other spicy stuff.
 6. Risks:
     - Wolves appear randomly and attack players.
     - Food can get rotten easily.
@@ -16,9 +16,9 @@
 7. Game over
     - tba
 
-## TODO Breakdown
+## Breakdowns
 
-### Goal of Day 1
+## Goal of Day 1
 
 1. Setup
     - boilerplate:
@@ -57,9 +57,9 @@
 3. Player
     - [x] Make player1 visible
 
-### Goal of Day 3
+## Goal of Day 3
 
-#### Player
+### Player
 
 **Movement**
 
@@ -71,7 +71,7 @@
 - [ ] Visualization
     - [ ] Use sprites with images that contain left, right, up, down
 
-#### Obstacles
+### Obstacles
 
 **Collisions**
 
