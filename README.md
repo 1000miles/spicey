@@ -63,13 +63,14 @@
 
 **Movement**
 
-- [ ] Logic
-    - [ ] Create a function to move the player
-        - [ ] Make player 1 move on keyPressed();
-        - [ ] Set conditions for directions;
+- [x] Logic
+    - [x] Create a function to move the player
+        - [x] Make player 1 move on keyPressed();
+        - [x] Set conditions for directions;
+        - [x] Ensure player does not move out of the screen
         - [ ] Set conditions for speed; (extra)
-- [ ] Visualization
-    - [ ] Use sprites with images that contain left, right, up, down
+- [x] Visualization
+    - [x] Use ~~sprites with~~ images that contain left, right, up, down images
 
 ### Obstacles
 
