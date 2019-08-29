@@ -18,6 +18,7 @@ let avocado;
 let wolfImg;
 let wolfImg2;
 let foodArr;
+let wolvesArr;
 
 function preload() {
 
@@ -59,8 +60,18 @@ function preload() {
 
         },
         {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
+
+        },
+        {
             img: loadImage("assets/food/Eggs.png"),
             name: 'eggs'
+
+        },
+        {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
 
         },
         {
@@ -75,9 +86,24 @@ function preload() {
     ];
 
     // Obstacles
-    wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
-    wolfImg2 = loadImage("assets/obstacles/danger/wolf-left.png");
-    wolfImg3 = loadImage("assets/obstacles/danger/wolf-right.png");
+
+    wolvesArr = [
+        {
+            img: loadImage("assets/obstacles/danger/wolf-blue.png"),
+            name: "wolfBlue"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-red.png"),
+            name: "wolfRed"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-white.png"),
+            name: "wolfWhite"
+        },
+    ];
+    // wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
+    // wolfImg2 = loadImage("assets/obstacles/danger/wolf-left.png");
+    // wolfImg3 = loadImage("assets/obstacles/danger/wolf-right.png");
 
     // Images on collision
     award1 = loadImage("assets/obstacles/danger/estrelectra.png");

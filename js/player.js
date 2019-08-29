@@ -2,7 +2,7 @@ let posX = 0;
 let posY = 0;
 let playerImg;
 let foodItem;
-let awardText500 = "You won 500 points with a chilli and can now kill wolves!";
+let awardText500 = "You won 500 points with a CHILLI and can now kill wolves!";
 let awardText250 = "You won 250 points!";
 
 class Player {
@@ -20,29 +20,28 @@ class Player {
     }
     checkCollision(objects) {
         objects.forEach((object) => {
-            // TODO: Check distance from objects to object
+            // Check distance from objects to object
             let dist =  distance(this , object);
 
             if (dist <= PLAYER_WIDTH){
+                fill(255);
+                stroke(255);
 
                 if (object.name === "chilli") {
-                    textSize(20);
-                    fill(255);
+                    textSize(30);
                     text(awardText500, this.posX, this.posY - 70);
                 } else if (object.name) {
                     textSize(20);
-                    fill(255);
                     text(awardText250, this.posX, this.posY - 70);
                 }
                 // Show award image above player's Y-axis
                 image(award1, this.posX, (this.posY - 30) % windowHeight); 
-                
             }
         });
     }
     draw() {
         push();
-            // TODO: Load the players
+            // Load the players images
             // Syntax: image(src, posX % windowWidth, posY % windoHeight, width, height)
             image(this.playerImg, this.posX, this.posY, PLAYER_WIDTH, PLAYER_HEIGHT);
         pop();
