@@ -1,6 +1,6 @@
 class Food {
     constructor(posX,posY,frame) {
-        this.posX = posX  ;
+        this.posX = posX;
         this.posY = posY;
         this.foods= [];
         this.frame = frame;
@@ -14,6 +14,7 @@ class Food {
         // image(src, xPos, yPos, width, height)
         this.posX += 4;
         image(plane1, this.posX % windowWidth, this.posY, 100, 75);
+        // image(plane2, (this.posX + 150) % windowWidth, this.posY + 150, 100, 75);
 
         // TODO: Loop though food array and print food item
         foodArr.forEach( item => { this.foodItem.push(item) } );

@@ -6,6 +6,7 @@ class Game {
     }
     
     setup(){
+        // Loop throuh wolves images and push each wolf img to an empty wolves array
          wolvesArr.forEach((wolf, i) => {
              let newWolf = new Obstacle(WOLF_WIDTH, WOLF_HEIGHT, 300, wolf.img);
              this.wolves.push(newWolf)

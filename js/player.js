@@ -2,7 +2,7 @@ let posX = 0;
 let posY = 0;
 let playerImg;
 let foodItem;
-let awardText500 = "You won 500 points with a CHILLI and can now kill wolves!";
+let awardChilliText500 = "You won 500 points with a CHILLI and can now kill wolves!";
 let awardText250 = "You won 250 points!";
 
 class Player {
@@ -29,7 +29,7 @@ class Player {
 
                 if (object.name === "chilli") {
                     textSize(30);
-                    text(awardText500, this.posX, this.posY - 70);
+                    text(awardChilliText500, this.posX, this.posY - 70);
                 } else if (object.name) {
                     textSize(20);
                     text(awardText250, this.posX, this.posY - 70);
@@ -43,7 +43,7 @@ class Player {
         push();
             // Load the players images
             // Syntax: image(src, posX % windowWidth, posY % windoHeight, width, height)
-            image(this.playerImg, this.posX, this.posY, PLAYER_WIDTH, PLAYER_HEIGHT);
+            image(this.playerImg, this.posX, this.posY - 80, PLAYER_WIDTH, PLAYER_HEIGHT);
         pop();
     } 
 }

@@ -4,7 +4,7 @@ function setup() {
     const canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("gameboard"); // id => get parentNode for DOM manipulation
     game.player.setup();
-    game.setup()
+    game.setup();
 }
 
 function draw() {
