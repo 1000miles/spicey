@@ -82,31 +82,31 @@
 
 - [x] Visualization
     - [x] Throw chilli (weapon) from the plane 1
-    - [ ] Throw random food from plane 2 (extra)
+    - [x] Throw random food from plane 2 (extra)
 
 ## Goal of Day 4
 
 ### Obstacles
 
-**Support (Plane)**
+**Plane**
 
-- [ ] Logic
-    - [ ] Create an array of food images and pull food from it randomly (extra)
-    - [ ] Create a function for the player to catch the food from the plane
+- [x] Logic
+    - [x] Create an array of food images and pull food from it randomly (extra)
+    - [x] Create a function for the player to catch the food from the plane
     - [ ] Use DOM manipulation to display scoring
-        - [ ] Calculate points won when food has been caught
+        - [x] Calculate points won when food has been caught
 
-        - [ ] Calculate points lost when food has been caught
-- [ ] Visualization
-    - [ ] Show different food types falling
-    - [ ] Show player scoring
+        - ~~[x] Calculate points lost when food has been caught~~ changed concept!
+- [x] Visualization
+    - [x] Show different food types falling
+    - [x] Show player scoring
 
 **Collisions**
 
-- [ ] Logic
-    - [ ] Create a function to check collisions
-    - [ ] Set conditions when and how often obstacle appears and when it disappears
-    - [ ] Set the visual frame and frequency for obstacles
+- [x] Logic
+    - [x] Create a function to check collisions
+    - [x] Set conditions when and how often obstacle appears and when it disappears
+    - [x] Set the visual frame and frequency for obstacles
 
 - [ ] Visualization
-    - [ ] Let obstacle (wolf) appear on the ground
+    - [x] Let obstacle (wolf) appear on the ground

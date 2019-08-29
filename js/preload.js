@@ -14,33 +14,92 @@ let plane4;
 let wolfBlue;
 
 // Food
-let avocado;
-let wolfImg;
+let foodArr;
+let wolvesArr;
 
 function preload() {
+
     // Backgrounds
     bgImage1 = loadImage("assets/backgrounds/game_background_1.png");
+    // bgImage2 = loadImage("assets/backgrounds/Flat-Nature-Art.png");
 
-    // TODO: Plane sprite
+    // Plane sprite
     plane1 = loadImage("assets/obstacles/plane/Fly1.png");
     plane2 = loadImage("assets/obstacles/plane/Fly2.png");
-    plane3 = loadImage("assets/obstacles/plane/Shoot5.png");
-    plane4 = loadImage("assets/obstacles/plane/Dead1.png");
+    // plane3 = loadImage("assets/obstacles/plane/Shoot5.png");
+    // plane4 = loadImage("assets/obstacles/plane/Dead1.png");
 
-    // TODO: Food sprite
+    // Food sprite
     foodArr = [
-        "assets/food/Apple.png",
-        "assets/food/AppleWorm.png",
-        "assets/food/Avocado.png",
-        "assets/food/Bacon.png",
-        "assets/food/Beer.png",
-        "assets/food/Bread.png"
+        {
+            img: loadImage("assets/food/Apple.png"),
+            name: 'apple'
+
+        },
+        {
+            img: loadImage("assets/food/Avocado.png"),
+            name: 'avocado'
+
+        },
+        {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
+
+        },
+        {
+            img: loadImage("assets/food/Chicken.png"),
+            name: 'chicken'
+
+        },
+        {
+            img: loadImage("assets/food/Bread.png"),
+            name: 'bread'
+
+        },
+        {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
+
+        },
+        {
+            img: loadImage("assets/food/Eggs.png"),
+            name: 'eggs'
+
+        },
+        {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
+
+        },
+        {
+            img: loadImage("assets/food/Fish.png"),
+            name: 'fish'
+        },
+        {
+            img: loadImage("assets/food/Lemon.png"),
+            name: 'lemon'
+        }
+
     ];
 
-    avocado = loadImage("assets/food/Avocado.png");
-    chilli = loadImage("assets/food/PepperRed.png");
-
     // Obstacles
-    wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
+
+    wolvesArr = [
+        {
+            img: loadImage("assets/obstacles/danger/wolf-blue.png"),
+            name: "wolfBlue"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-red.png"),
+            name: "wolfRed"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-white.png"),
+            name: "wolfWhite"
+        },
+    ];
+
+    // Images on collision
+    award1 = loadImage("assets/obstacles/danger/estrelectra.png");
 }
 
