@@ -16,10 +16,13 @@ let wolfBlue;
 // Food
 let avocado;
 let wolfImg;
+let wolfImg2;
+let foodArr;
 
 function preload() {
     // Backgrounds
     bgImage1 = loadImage("assets/backgrounds/game_background_1.png");
+    bgImage2 = loadImage("assets/backgrounds/Flat-Nature-Art.png");
 
     // TODO: Plane sprite
     plane1 = loadImage("assets/obstacles/plane/Fly1.png");
@@ -29,12 +32,12 @@ function preload() {
 
     // TODO: Food sprite
     foodArr = [
-        "assets/food/Apple.png",
-        "assets/food/AppleWorm.png",
-        "assets/food/Avocado.png",
-        "assets/food/Bacon.png",
-        "assets/food/Beer.png",
-        "assets/food/Bread.png"
+        loadImage("assets/food/Apple.png"),
+        loadImage("assets/food/AppleWorm.png"),
+        loadImage("assets/food/Avocado.png"),
+        loadImage("assets/food/Bacon.png"),
+        loadImage("assets/food/Beer.png"),
+        loadImage("assets/food/Bread.png")
     ];
 
     avocado = loadImage("assets/food/Avocado.png");
@@ -42,5 +45,7 @@ function preload() {
 
     // Obstacles
     wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
+    wolfImg2 = loadImage("assets/obstacles/danger/wolf-left.png");
+    wolfImg3 = loadImage("assets/obstacles/danger/wolf-right.png");
 }
 
