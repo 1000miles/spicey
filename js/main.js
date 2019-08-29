@@ -11,7 +11,7 @@ function draw() {
     game.draw();
     keyPressed(); // call the keyPressed function
     // @DEBUG console.log(game.player.posY, innerHeight);
-}
+} 
 
 function keyPressed() {
     // @DEBUG: console.log(game.player.playerImg);
