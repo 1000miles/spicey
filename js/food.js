@@ -1,4 +1,4 @@
-class Food {
+class FoodItem {
     constructor(x, y, img) {
         this.width = width;
         this.height = height;
