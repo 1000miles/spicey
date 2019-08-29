@@ -13,6 +13,11 @@ function draw() {
     // @DEBUG console.log(game.player.posY, innerHeight);
 } 
 
+// ! Use arrow function to prevent returning `undefined`
+const distance = (a,b) => {
+    return Math.sqrt((a.posX - b.posX) ** 2 + (a.posY - b.posY) ** 2);
+}
+
 function keyPressed() {
     // @DEBUG: console.log(game.player.playerImg);
 

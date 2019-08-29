@@ -33,11 +33,10 @@ function preload() {
     // TODO: Food sprite
     foodArr = [
         loadImage("assets/food/Apple.png"),
-        loadImage("assets/food/AppleWorm.png"),
         loadImage("assets/food/Avocado.png"),
         loadImage("assets/food/Bacon.png"),
-        loadImage("assets/food/Beer.png"),
-        loadImage("assets/food/Bread.png")
+        loadImage("assets/food/Bread.png"),
+        loadImage("assets/food/PepperRed.png")
     ];
 
     avocado = loadImage("assets/food/Avocado.png");
