@@ -15,6 +15,7 @@ let wolfBlue;
 
 // Food
 let avocado;
+let wolfImg;
 
 function preload() {
     // Backgrounds
@@ -39,7 +40,7 @@ function preload() {
     avocado = loadImage("assets/food/Avocado.png");
     chilli = loadImage("assets/food/PepperRed.png");
 
-    // TODO: Obstacles sprite
-    wolfBlue = loadImage("assets/obstacles/danger/wolf-blue.png");
+    // Obstacles
+    wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
 }
 

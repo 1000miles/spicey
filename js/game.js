@@ -4,6 +4,7 @@ class Game {
         this.player = new Player(10, window.innerHeight - PLAYER_HEIGHT - 30);
         // TODO: Instantiate a new obstacle
         this.food = new Food(100, 100,100);
+        this.wolf = new Obstacle(WOLF_WIDTH, WOLF_HEIGHT, 100);
     }
     
     draw() {
@@ -13,6 +14,7 @@ class Game {
         
         this.player.draw();
         this.food.draw();
+        this.wolf.draw();
         
     }
 }
