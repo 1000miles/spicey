@@ -1,6 +1,6 @@
-// let posX = 0;
-// let posY = 0;
-// let playerImg;
+let posX = 0;
+let posY = 0;
+let playerImg;
 
 class Player {
     constructor(x, y) {
@@ -18,11 +18,12 @@ class Player {
         objects.forEach((object) => {
             // TODO: Check distance from objects to object
             let dist =  distance(this , object);
-            
+
             if (dist <= PLAYER_WIDTH){
-                console.log('COLLISION')
+                text("CONGRATS! YOU WON POINTS!", this.posY - 50);
+                image(award1, this.posX, (this.posY - 30) % windowHeight);
             }
-        })
+        });
     }
     draw() {
         push();
