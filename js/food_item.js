@@ -2,7 +2,8 @@ class FoodItem {
     constructor(x, y, img) {
         this.posX = x % windowWidth;
         this.posY = y;
-        this.image = img;
+        this.image = img.img;
+        this.name = img.name;
     }
 
     setup() {

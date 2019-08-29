@@ -2,6 +2,8 @@ let posX = 0;
 let posY = 0;
 let playerImg;
 let foodItem;
+let awardText500 = "You won 500 points with a chilli and can now kill wolves!";
+let awardText250 = "You won 250 points!";
 
 class Player {
     constructor(x, y, foodItem) {
@@ -22,13 +24,17 @@ class Player {
             let dist =  distance(this , object);
 
             if (dist <= PLAYER_WIDTH){
-                console.log(`FOOD ITEM:`, object);
 
-                let feedbackText = "You won 500 points!";
-
-                textSize(32);
-                fill(255);
-                text(feedbackText, this.posX, this.posY - 70);
+                if (object.name === "chilli") {
+                    textSize(20);
+                    fill(255);
+                    text(awardText500, this.posX, this.posY - 70);
+                } else if (object.name) {
+                    textSize(20);
+                    fill(255);
+                    text(awardText250, this.posX, this.posY - 70);
+                }
+                // Show award image above player's Y-axis
                 image(award1, this.posX, (this.posY - 30) % windowHeight); 
                 
             }

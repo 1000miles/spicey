@@ -33,15 +33,46 @@ function preload() {
 
     // TODO: Food sprite
     foodArr = [
-        loadImage("assets/food/Apple.png"),
-        loadImage("assets/food/Avocado.png"),
-        loadImage("assets/food/Bacon.png"),
-        loadImage("assets/food/Bread.png"),
-        loadImage("assets/food/PepperRed.png")
-    ];
+        {
+            img: loadImage("assets/food/Apple.png"),
+            name: 'apple'
 
-    avocado = loadImage("assets/food/Avocado.png");
-    chilli = loadImage("assets/food/PepperRed.png");
+        },
+        {
+            img: loadImage("assets/food/Avocado.png"),
+            name: 'avocado'
+
+        },
+        {
+            img: loadImage("assets/food/PepperRed.png"),
+            name: 'chilli'
+
+        },
+        {
+            img: loadImage("assets/food/Chicken.png"),
+            name: 'chicken'
+
+        },
+        {
+            img: loadImage("assets/food/Bread.png"),
+            name: 'bread'
+
+        },
+        {
+            img: loadImage("assets/food/Eggs.png"),
+            name: 'eggs'
+
+        },
+        {
+            img: loadImage("assets/food/Fish.png"),
+            name: 'fish'
+        },
+        {
+            img: loadImage("assets/food/Lemon.png"),
+            name: 'lemon'
+        }
+
+    ];
 
     // Obstacles
     wolfImg = loadImage("assets/obstacles/danger/wolf-blue.png");
