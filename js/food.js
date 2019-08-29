@@ -12,7 +12,8 @@ class Food {
 
         // Load Food Delivery by plane
         // image(src, xPos, yPos, width, height)
-        image(plane1, (this.posX += 1) % windowWidth, this.posY, 100, 75);
+        this.posX += 4;
+        image(plane1, this.posX % windowWidth, this.posY, 100, 75);
 
         // TODO: Loop though food array and print food item
         foodArr.forEach( item => { this.foodItem.push(item) } );

@@ -23,12 +23,12 @@ function keyPressed() {
 
     if (keyIsDown(RIGHT_ARROW)){
         // TODO: If player's posX is smaller than windowWidth and player-width, move right
-        if (game.player.posX < innerWidth - PLAYER_WIDTH) game.player.posX += 3;
+        if (game.player.posX < innerWidth - PLAYER_WIDTH) game.player.posX += 6;
         game.player.playerImg = game.player.right;
     }
     if (keyIsDown(LEFT_ARROW)) {
         // TODO: If player's posX is bigger than 0, then player can move to left
-        if (game.player.posX > 0) game.player.posX -= 3;
+        if (game.player.posX > 0) game.player.posX -= 6;
         game.player.playerImg = game.player.left;
     }
     if (keyIsDown(UP_ARROW)) {
