@@ -1,10 +1,10 @@
 class Food {
-    constructor(posX,posY,frame, foodItem) {
-        this.posX = posX;
+    constructor(posX,posY,frame) {
+        this.posX = posX  ;
         this.posY = posY;
         this.foods= [];
         this.frame = frame;
-        this.foodItem = foodItem;
+        this.foodItem = [];
     }
 
     draw() {
@@ -15,10 +15,10 @@ class Food {
         image(plane1, (this.posX += 1) % windowWidth, this.posY, 100, 75);
 
         // TODO: Loop though food array and print food item
-        foodArr.forEach( item => { this.foodItem = item } );
+        foodArr.forEach( item => { this.foodItem.push(item) } );
 
         if (frameCount % this.frame === 0) {
-            this.foods.push(new FoodItem(this.posX, this.posY + 75, this.foodItem));
+            this.foods.push(new FoodItem(this.posX, this.posY + 75, this.foodItem[Math.floor(Math.random()*this.foodItem.length)]));
         }
 
         // TODO: For every item index bigger than 10 take out first item

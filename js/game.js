@@ -1,7 +1,7 @@
 class Game {
     constructor() {
         this.player = new Player(10, window.innerHeight - PLAYER_HEIGHT - 30);
-        this.food = new Food(100, 100,100, foodArr);
+        this.food = new Food(100, 100,100);
         this.wolf = new Obstacle(WOLF_WIDTH, WOLF_HEIGHT, 100);
     }
     

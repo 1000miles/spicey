@@ -1,11 +1,13 @@
 let posX = 0;
 let posY = 0;
 let playerImg;
+let foodItem;
 
 class Player {
-    constructor(x, y) {
+    constructor(x, y, foodItem) {
         this.posX = x;
         this.posY = y;
+        this.foodItem = foodItem;
     }
     setup(){
         this.down =loadImage("assets/player1/idle.png");
@@ -20,12 +22,15 @@ class Player {
             let dist =  distance(this , object);
 
             if (dist <= PLAYER_WIDTH){
+                console.log(`FOOD ITEM:`, object);
+
                 let feedbackText = "You won 500 points!";
 
                 textSize(32);
                 fill(255);
                 text(feedbackText, this.posX, this.posY - 70);
-                image(award1, this.posX, (this.posY - 30) % windowHeight);
+                image(award1, this.posX, (this.posY - 30) % windowHeight); 
+                
             }
         });
     }
