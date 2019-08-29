@@ -1,13 +1,22 @@
-class FoodItem {
-    constructor(x, y, img) {
-        this.width = width;
-        this.height = height;
-        this.x = x;
-        this.y = y;
-        this.image = img;
+class Food {
+    constructor(posX,posY,frame) {
+        this.posX = posX;
+        this.posY = posY;
+        this.foods= [];
+        this.frame = frame;
     }
 
     draw() {
-        image(this.image, this.x % windowWidth, this.y += 3, 30, 30);
+        // Load Food Delivery by plane
+        // image(src, xPos, yPos, width, height)
+        image(plane1, (this.posX += 1) % windowWidth, this.posY, 100, 75);
+
+        if (frameCount % this.frame === 0) {
+            this.foods.push(new FoodItem(this.posX, this.posY + 75, chilli));
+        }
+
+        if (this.foods.length > 10) this.foods.shift();
+
+        this.foods.forEach(food => food.draw());
     }
 }
