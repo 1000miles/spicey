@@ -23,6 +23,11 @@ class Game {
         if(this.food.foods.length){
             this.player.checkCollision(this.food.foods);
         }
+
+        if (this.wolves.length) {
+            this.player.checkCollisionWolf(this.wolves);
+        }
+
         // Draw each wolf from the wolves array
         this.wolves.forEach(wolf => wolf.draw())
         this.food.draw();
