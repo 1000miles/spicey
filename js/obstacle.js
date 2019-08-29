@@ -1,18 +1,23 @@
 let randomX;
 let randomY;
+let frame;
 
 class Obstacle {
     constructor(posX,posY,frame) {
         this.posX = posX;
         this.posY = posY;
-        this.randomX = Math.random() * this.posX;
-        this.randomY = Math.random() * this.posY;;
+        this.randomX = Math.floor(Math.random() * window.innerWidth);
+        this.randomY = Math.floor(Math.random() * window.innerHeight / 2) + (window.innerHeight / 2); // Generate a random number only along the lower half of Y-axis
         this.frame = frame;
         this.wolves = [];
     }
 
     draw() {
-        // console.log(image(wolfBlue,this.randomX % windowWidth, this.randomY % windowHeight, 50, 50));
-        image(wolfImg, this.randomX % windowWidth, this.randomY % windowHeight, 50, 50);
+        // TODO: If frame count number is divisible by frame, generate random
+        if (frameCount % this.frame === 0) {
+            this.randomX = Math.floor(Math.random() * window.innerWidth);
+            this.randomY = Math.floor(Math.random() * window.innerHeight / 2) + (window.innerHeight / 2);
+        }
+        image(wolfImg, this.randomX, this.randomY, 50, 50);
     }
 }

@@ -9,3 +9,5 @@ const FOOD_WIDTH = 50;
 
 const WOLF_HEIGHT = 50;
 const WOLF_WIDTH = 50;
+
+const FPS = 60, INTERVAL = FPS * 10;
