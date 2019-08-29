@@ -20,7 +20,11 @@ class Player {
             let dist =  distance(this , object);
 
             if (dist <= PLAYER_WIDTH){
-                text("CONGRATS! YOU WON POINTS!", this.posY - 50);
+                let feedbackText = "You won 500 points!";
+
+                textSize(32);
+                fill(255);
+                text(feedbackText, this.posX, this.posY - 70);
                 image(award1, this.posX, (this.posY - 30) % windowHeight);
             }
         });
