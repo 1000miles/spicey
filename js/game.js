@@ -1,6 +1,6 @@
 class Game {
     constructor() {
-        this.player = new Player(10, window.innerHeight - PLAYER_HEIGHT - 30);
+        this.player = new Player(10, window.innerHeight - PLAYER_HEIGHT - 70);
         this.food = new Food(100, 100,100);
         this.wolves = [];
     }

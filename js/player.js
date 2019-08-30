@@ -2,7 +2,7 @@ let posX = 0;
 let posY = 0;
 let playerImg;
 let foodItem;
-let awardChilliText500 = "You won 500 points with a CHILLI and can now kill wolves!";
+let awardChilliText500 = "You won 500 points!";
 let awardText250 = "You won 250 points!";
 let lossWolfRed500 = "That's a beast! You lost 500 points!";
 let lossWolf300 = "Sorry, you lost 300 points!";
@@ -25,19 +25,19 @@ class Player {
             // Check distance from objects to object
             let dist =  distance(this , object);
 
-            if (dist <= PLAYER_WIDTH){
+            if (dist <= PLAYER_WIDTH && dist <= PLAYER_HEIGHT){
                 fill(255);
                 stroke(255);
 
                 if (object.name === "chilli") {
                     textSize(30);
-                    text(awardChilliText500, this.posX, this.posY - 70);
+                    text(awardChilliText500, this.posX, this.posY - 160);
+                    // Show award image on chilli collision
+                    image(award1, this.posX, (this.posY - 120) % windowHeight);
                 } else if (object.name) {
                     textSize(20);
-                    text(awardText250, this.posX, this.posY - 70);
+                    text(awardText250, this.posX, this.posY - 100);
                 }
-                // Show award image above player's Y-axis
-                image(award1, this.posX, (this.posY - 30) % windowHeight); 
             }
         });
     }
