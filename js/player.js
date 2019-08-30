@@ -6,13 +6,16 @@ let awardChilliText500 = "You won 500 points!";
 let awardText250 = "You won 250 points!";
 // let lossWolfRed500 = "That's a beast! You lost 500 points!";
 // let lossWolf300 = "Sorry, you lost 300 points!";
-let gameOverText = "GAME OVER! You lost."
+let gameOverText = "GAME OVER! You lost.";
+let scoring = [];
+let sum;
 
 class Player {
     constructor(posX, posY, foodItem) {
         this.posX = posX;
         this.posY = posY;
         this.foodItem = foodItem;
+        this.scoreResult = sum;
     }
     setup(){
         this.down =loadImage("assets/player1/idle.png");
@@ -26,19 +29,46 @@ class Player {
             // Check distance from objects to object
             let distance =  dist(this.posX, this.posY, object.posX, object.posY);
 
-            if (distance <= PLAYER_WIDTH && distance <= PLAYER_HEIGHT){
+            if (distance <= PLAYER_WIDTH) {
                 fill(255);
                 stroke(255);
 
+                let score = 0;
+
                 if (object.name === "chilli") {
-                    textSize(30);
-                    text(awardChilliText500, this.posX, this.posY - 160);
-                    // Show award image on chilli collision
-                    image(award1, this.posX, (this.posY - 120) % windowHeight);
+                    // AwardingText
+                    push();
+                        textSize(30);
+                        text(awardChilliText500, this.posX, this.posY - 160);
+                        // Show award image on chilli collision
+                        image(award1, this.posX, (this.posY - 120) % windowHeight);
+                    pop();
+
+                    // Scores on collision
+                    push();
+                        score += 500;
+                    pop();
+                    
                 } else if (object.name) {
-                    textSize(20);
-                    text(awardText250, this.posX, this.posY - 100);
+                    // AwardingText
+                    push();
+                        textSize(20);
+                        text(awardText250, this.posX, this.posY - 100);
+                    pop();
+
+                    // Scores on collision
+                    push();
+                        score += 250;
+                    pop();
                 }
+
+                scoring.push(score);
+                sum = scoring.reduce((a, b) => a + b, 0);
+                
+                console.log(sum);
+
+                textSize(100);
+                text(sum, this.posX, this.posY - 160);
             }
         });
     }
