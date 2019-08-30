@@ -4,8 +4,9 @@ let playerImg;
 let foodItem;
 let awardChilliText500 = "You won 500 points!";
 let awardText250 = "You won 250 points!";
-let lossWolfRed500 = "That's a beast! You lost 500 points!";
-let lossWolf300 = "Sorry, you lost 300 points!";
+// let lossWolfRed500 = "That's a beast! You lost 500 points!";
+// let lossWolf300 = "Sorry, you lost 300 points!";
+let gameOverText = "GAME OVER! You lost."
 
 class Player {
     constructor(posX, posY, foodItem) {
@@ -23,9 +24,9 @@ class Player {
     checkCollision(objects) {
         objects.forEach((object) => {
             // Check distance from objects to object
-            let dist =  distance(this , object);
+            let distance =  dist(this.posX, this.posY, object.posX, object.posY);
 
-            if (dist <= PLAYER_WIDTH && dist <= PLAYER_HEIGHT){
+            if (distance <= PLAYER_WIDTH && distance <= PLAYER_HEIGHT){
                 fill(255);
                 stroke(255);
 
@@ -46,26 +47,21 @@ class Player {
         // console.log(`OBJECT:`, objects);
         objects.forEach((object) => {
             // Check distance from objects to object
-            let dist = distance(this, object);
+            let distance = dist(this.posX, this.posY, object.posX, object.posY);
 
             // console.log(`OBJECT WOLF`, object);
             // console.log(dist)
 
-            if (dist <= PLAYER_WIDTH) {
+            if (distance <= PLAYER_WIDTH && distance <= PLAYER_HEIGHT) {
                 fill(255);
                 stroke(255);
 
                 // @DEBUG console.log(`COLLISION WOLF`, object);
 
                 if (object) {
-                    textSize(30);
-                    text(lossWolfRed500, this.posX, this.posY - 70);
-                } else {
-                    textSize(20);
-                    text(lossWolf300, this.posX, this.posY - 70);
-                }
-                // Show award image above player's Y-axis
-                image(award1, this.posX, (this.posY - 30) % windowHeight);
+                    textSize(100);
+                    text(gameOverText, this.posX, this.posY - 70);
+                } 
             }
         });
     }

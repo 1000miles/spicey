@@ -97,6 +97,18 @@ function preload() {
             img: loadImage("assets/obstacles/danger/wolf-white.png"),
             name: "wolfWhite"
         },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-blue.png"),
+            name: "wolfBlue"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-red.png"),
+            name: "wolfRed"
+        },
+        {
+            img: loadImage("assets/obstacles/danger/wolf-white.png"),
+            name: "wolfWhite"
+        },
     ];
 
     // Images on collision
