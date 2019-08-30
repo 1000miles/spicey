@@ -9,13 +9,14 @@ let awardText250 = "You won 250 points!";
 let gameOverText = "GAME OVER! You lost.";
 let scoring = [];
 let sum;
+let total;
 
 class Player {
     constructor(posX, posY, foodItem) {
         this.posX = posX;
         this.posY = posY;
         this.foodItem = foodItem;
-        this.scoreResult = sum;
+        this.scoreResult = total;
     }
     setup(){
         this.down =loadImage("assets/player1/idle.png");
@@ -61,14 +62,23 @@ class Player {
                         score += 250;
                     pop();
                 }
+                
+                for (let i = 0; i < scoring.length; i++) {
+                    // Get last score score on collision
+                    console.log(`SUM:`, sum = scoring[i-1]);
+
+                    // Get total of sum 
+                    console.log(`TOTAL:`, total = scoring.reduce((a, b) => a + b, 0));
+
+                    // console.log(`END RESULT`, result = total - sum)
+                }
 
                 scoring.push(score);
-                sum = scoring.reduce((a, b) => a + b, 0);
-                
-                console.log(sum);
 
                 textSize(100);
-                text(sum, this.posX, this.posY - 160);
+                text(total, this.posX, this.posY - 160);
+                // console.log(`SUM:`, sum);
+                // console.log(`TOTAL:`, total);
             }
         });
     }
