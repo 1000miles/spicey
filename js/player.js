@@ -8,9 +8,9 @@ let lossWolfRed500 = "That's a beast! You lost 500 points!";
 let lossWolf300 = "Sorry, you lost 300 points!";
 
 class Player {
-    constructor(x, y, foodItem) {
-        this.posX = x;
-        this.posY = y;
+    constructor(posX, posY, foodItem) {
+        this.posX = posX;
+        this.posY = posY;
         this.foodItem = foodItem;
     }
     setup(){
@@ -43,16 +43,21 @@ class Player {
     }
 
     checkCollisionWolf(objects) {
+        // console.log(`OBJECT:`, objects);
         objects.forEach((object) => {
             // Check distance from objects to object
             let dist = distance(this, object);
+
+            // console.log(`OBJECT WOLF`, object);
+            // console.log(dist)
 
             if (dist <= PLAYER_WIDTH) {
                 fill(255);
                 stroke(255);
 
-                if (object.name === "wolfRed") {
-                    console.log("RED WOLF!!!");
+                // @DEBUG console.log(`COLLISION WOLF`, object);
+
+                if (object) {
                     textSize(30);
                     text(lossWolfRed500, this.posX, this.posY - 70);
                 } else {
