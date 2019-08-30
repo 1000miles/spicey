@@ -76,7 +76,8 @@ class Player {
                 scoring.push(score);
 
                 textSize(100);
-                text(total, this.posX, this.posY - 160);
+                fill('black');
+                text(total, this.posX, this.posY - windowHeight / 3);
                 // console.log(`SUM:`, sum);
                 // console.log(`TOTAL:`, total);
             }
