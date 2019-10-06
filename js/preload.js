@@ -18,7 +18,6 @@ let foodArr;
 let wolvesArr;
 
 function preload() {
-
     // Backgrounds
     bgImage1 = loadImage("assets/backgrounds/game_background_1.png");
     // bgImage2 = loadImage("assets/backgrounds/Flat-Nature-Art.png");
@@ -89,13 +88,8 @@ function preload() {
             img: loadImage("assets/obstacles/danger/wolf-blue.png"),
             name: "wolfBlue"
         },
-        {
-            img: loadImage("assets/obstacles/danger/wolf-red.png"),
+        {  img: loadImage("assets/obstacles/danger/wolf-red.png"),
             name: "wolfRed"
-        },
-        {
-            img: loadImage("assets/obstacles/danger/wolf-white.png"),
-            name: "wolfWhite"
         },
         {
             img: loadImage("assets/obstacles/danger/wolf-blue.png"),
@@ -104,11 +98,7 @@ function preload() {
         {
             img: loadImage("assets/obstacles/danger/wolf-red.png"),
             name: "wolfRed"
-        },
-        {
-            img: loadImage("assets/obstacles/danger/wolf-white.png"),
-            name: "wolfWhite"
-        },
+        }
     ];
 
     // Images on collision

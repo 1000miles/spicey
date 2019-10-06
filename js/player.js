@@ -9,24 +9,27 @@ let awardText250 = "You won 250 points!";
 let gameOverText = "GAME OVER! You lost.";
 let scoring = [];
 let sum;
-let total;
+let total= 0;
 
 class Player {
     constructor(posX, posY, foodItem) {
         this.posX = posX;
         this.posY = posY;
         this.foodItem = foodItem;
-        this.scoreResult = total;
+        this.total = total;
+        this.displayScore = false
     }
+
     setup(){
-        this.down =loadImage("assets/player1/idle.png");
-        this.up =loadImage("assets/player1/jump.png");
-        this.right =loadImage("assets/player1/run.png");
-        this.left =loadImage("assets/player1/landing.png");
+        this.down = loadImage("assets/player1/idle.png");
+        this.up = loadImage("assets/player1/jump.png");
+        this.right = loadImage("assets/player1/run.png");
+        this.left = loadImage("assets/player1/landing.png");
         this.playerImg = this.down;
     }
+
     checkCollision(objects) {
-        objects.forEach((object) => {
+        objects.forEach((object,i) => {
             // Check distance from objects to object
             let distance =  dist(this.posX, this.posY, object.posX, object.posY);
 
@@ -37,49 +40,37 @@ class Player {
                 let score = 0;
 
                 if (object.name === "chilli") {
-                    // AwardingText
-                    push();
-                        textSize(30);
-                        text(awardChilliText500, this.posX, this.posY - 160);
-                        // Show award image on chilli collision
-                        image(award1, this.posX, (this.posY - 120) % windowHeight);
-                    pop();
-
                     // Scores on collision
-                    push();
-                        score += 500;
-                    pop();
-                    
+                    score += 500;
+
+                    game.food.foods.splice(i, 1);
+
+                    this.displayScore = true;
+
+                    setTimeout(() => {
+                    this.displayScore = false;
+
+                    }, 2000);
+
                 } else if (object.name) {
                     // AwardingText
-                    push();
-                        textSize(20);
-                        text(awardText250, this.posX, this.posY - 100);
-                    pop();
+                    textSize(50);
+                    text(awardText250, this.posX, this.posY - 100);
 
                     // Scores on collision
-                    push();
-                        score += 250;
-                    pop();
+                    score += 250;
+
                 }
-                
+
                 for (let i = 0; i < scoring.length; i++) {
-                    // Get last score score on collision
-                    console.log(`SUM:`, sum = scoring[i-1]);
+                    // Get last score on collision
+                    console.log(`SUM:`, sum = scoring[i - 1]);
 
-                    // Get total of sum 
+                    // Get total of sum
                     console.log(`TOTAL:`, total = scoring.reduce((a, b) => a + b, 0));
-
-                    // console.log(`END RESULT`, result = total - sum)
                 }
 
                 scoring.push(score);
-
-                textSize(100);
-                fill('black');
-                text(total, this.posX, this.posY - windowHeight / 3);
-                // console.log(`SUM:`, sum);
-                // console.log(`TOTAL:`, total);
             }
         });
     }
@@ -89,29 +80,36 @@ class Player {
         objects.forEach((object) => {
             // Check distance from objects to object
             let distance = dist(this.posX, this.posY, object.posX, object.posY);
+            // console.log(distance,this.posX,this.posY,object.posX, object.posY);
 
-            // console.log(`OBJECT WOLF`, object);
-            // console.log(dist)
-
-            if (distance <= PLAYER_WIDTH && distance <= PLAYER_HEIGHT) {
+            if (distance <= PLAYER_WIDTH) {
+                console.log("crash")
                 fill(255);
                 stroke(255);
 
-                // @DEBUG console.log(`COLLISION WOLF`, object);
-
                 if (object) {
-                    textSize(100);
-                    text(gameOverText, this.posX, this.posY - 70);
-                } 
+                    textSize(50);
+                    text(gameOverText, this.posX, this.posY - 20);
+                }
             }
         });
     }
 
     draw() {
-        push();
-            // Load the players images
-            // Syntax: image(src, posX % windowWidth, posY % windoHeight, width, height)
-            image(this.playerImg, this.posX, this.posY - 80, PLAYER_WIDTH, PLAYER_HEIGHT);
-        pop();
-    } 
+        textSize(100);
+        fill('black');
+        text(total, 100, 100 );
+
+        if(this.displayScore){
+             textSize(70);
+             text(awardChilliText500, this.posX, this.posY - 60);
+             // Show award image on chilli collision
+             image(award1, this.posX, (this.posY - 80) % windowHeight);
+
+        }
+        // Load the players images
+        // Syntax: image(src, posX % windowWidth, posY % windoHeight, width, height)
+        image(this.playerImg, this.posX, this.posY - 80, PLAYER_WIDTH, PLAYER_HEIGHT);
+
+    }
 }

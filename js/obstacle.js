@@ -9,7 +9,7 @@ class Obstacle {
         this.randomX = Math.floor(Math.random() * window.innerWidth);
         this.randomY = Math.floor(Math.random() * window.innerHeight / 2);
         this.frame = frame;
-        // this.wolfType = [];
+        this.wolfType = [];
         this.imagePath = imagePath;
     }
 
@@ -17,12 +17,12 @@ class Obstacle {
         // TODO: If frame count number is divisible by frame, generate random
         if (frameCount % this.frame === 0) {
             this.randomX = Math.floor(Math.random() * window.innerWidth);
-            this.randomY = Math.floor(Math.random() * window.innerHeight / 2);
+            this.randomY =random(500,window.innerHeight);
             this.posX = this.randomX;
             this.posY = this.randomY;
         }
 
         // Wolves should only appear on the lower half of Y-Axis (+ window.innerHeight / 2)
-        image(this.imagePath, this.posX, this.posY + (window.innerHeight / 2), WOLF_WIDTH, WOLF_HEIGHT);
+        image(this.imagePath, this.posX, this.posY , WOLF_WIDTH, WOLF_HEIGHT);
     }
 }
